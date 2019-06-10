@@ -1,18 +1,17 @@
-command = input(">")
+command = ""
 while command.lower() != "quit":
+    command = input("> ").lower()
     if command.lower() == "start":
-        print("The car's running")
-    elif command.lower() == "help":
+        print("Car started")
+    elif command == "help":
         print('''
         help: Shows the commands
         start: starts the car
         stop: stops the car
-        quit: exits the program
-        ''')
-    elif command.lower() == "stop":
-        print("The car stopped")
+        quit: exits the program''')
+    elif command == "stop":
+        print("Car stopped")
     else:
         print("I don't understand...")
-    command = input(">")
 else:
     print("Goodbye :D ")
